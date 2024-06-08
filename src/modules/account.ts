@@ -1,7 +1,7 @@
 import { Axios } from "axios";
-import { ClientBase } from "./client";
-import { TellerOptionsBase } from "../common/types";
-import { TellerAccount, TellerAccountBalances, TellerAccountDetails } from "../interfaces/account";
+import { ClientBase } from "./client.js";
+import { TellerOptionsBase } from "../common/types.js";
+import { TellerAccount, TellerAccountBalances, TellerAccountDetails } from "../interfaces/account.js";
 
 export default class TellerAccountModule extends ClientBase {
   constructor(axios: Axios) {

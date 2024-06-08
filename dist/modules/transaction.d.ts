@@ -1,7 +1,7 @@
 import { Axios } from "axios";
-import { ClientBase } from "./client";
-import { TellerOptionsPagination } from "../common/types";
-import { TellerTransaction } from "../interfaces/transaction";
+import { ClientBase } from "./client.js";
+import { TellerOptionsPagination } from "../common/types.js";
+import { TellerTransaction } from "../interfaces/transaction.js";
 export default class TellerTransactionModule extends ClientBase {
     constructor(axios: Axios);
     list(accountId: string, options?: TellerOptionsPagination): Promise<TellerTransaction[]>;

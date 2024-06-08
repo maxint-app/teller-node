@@ -1,14 +1,14 @@
 import { Axios } from "axios";
-import TellerIdentityModule from "./modules/identity";
+import TellerIdentityModule from "./modules/identity.js";
 import https from "https";
 import fs from "fs";
-import TellerAccountModule from "./modules/account";
-import TellerTransactionModule from "./modules/transaction";
+import TellerAccountModule from "./modules/account.js";
+import TellerTransactionModule from "./modules/transaction.js";
 
-export * from "./interfaces/identity";
-export * from "./interfaces/account";
-export * from "./interfaces/transaction";
-export * from "./common/types";
+export * from "./interfaces/identity.js";
+export * from "./interfaces/account.js";
+export * from "./interfaces/transaction.js";
+export * from "./common/types.js";
 
 export class TellerClient {
   private certificatePath: string;
