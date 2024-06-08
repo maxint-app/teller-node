@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxint-app/node-teller.git"
+    "url": "git+https://github.com/maxint-app/teller-node.git"
   },
   "keywords": [
     "teller",
@@ -21,9 +21,9 @@
   "author": "Maxint Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maxint-app/node-teller/issues"
+    "url": "https://github.com/maxint-app/teller-node/issues"
   },
-  "homepage": "https://github.com/maxint-app/node-teller#readme",
+  "homepage": "https://github.com/maxint-app/teller-node#readme",
   "devDependencies": {
     "@types/node": "^20.11.15",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
