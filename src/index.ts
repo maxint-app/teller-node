@@ -47,6 +47,7 @@ export class TellerClient {
           }
         : undefined,
       httpsAgent,
+      responseType: "json",
     });
 
     this.identity = new TellerIdentityModule(axios);

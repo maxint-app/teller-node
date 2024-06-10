@@ -26,6 +26,7 @@ export default class TellerTransactionModule extends ClientBase {
         auth: options?.accessToken
           ? { username: options.accessToken, password: "" }
           : undefined,
+        responseType: "json",
       },
     );
 
@@ -42,6 +43,7 @@ export default class TellerTransactionModule extends ClientBase {
         auth: options?.accessToken
           ? { username: options.accessToken, password: "" }
           : undefined,
+        responseType: "json",
       },
     );
 

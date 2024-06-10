@@ -13,6 +13,7 @@ export default class TellerAccountModule extends ClientBase {
       auth: options?.accessToken
         ? { username: options.accessToken, password: "" }
         : undefined,
+      responseType: "json",
     });
 
     return response.data;
@@ -23,6 +24,7 @@ export default class TellerAccountModule extends ClientBase {
       auth: options?.accessToken
         ? { username: options.accessToken, password: "" }
         : undefined,
+      responseType: "json",
     });
 
     return response.data;
@@ -33,6 +35,7 @@ export default class TellerAccountModule extends ClientBase {
       auth: options?.accessToken
         ? { username: options.accessToken, password: "" }
         : undefined,
+      responseType: "json",
     });
   }
 
@@ -41,6 +44,7 @@ export default class TellerAccountModule extends ClientBase {
       auth: options?.accessToken
         ? { username: options.accessToken, password: "" }
         : undefined,
+      responseType: "json",
     });
 
     return response.data;
@@ -51,6 +55,7 @@ export default class TellerAccountModule extends ClientBase {
       auth: options?.accessToken
         ? { username: options.accessToken, password: "" }
         : undefined,
+      responseType: "json",
     });
 
     return response.data;

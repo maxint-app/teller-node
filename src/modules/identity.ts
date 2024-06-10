@@ -13,6 +13,7 @@ export default class TellerIdentityModule extends ClientBase {
       auth: options?.accessToken
         ? { username: options.accessToken, password: "" }
         : undefined,
+      responseType: "json",
     });
     return response.data;
   }
