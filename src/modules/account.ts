@@ -16,6 +16,10 @@ export default class TellerAccountModule extends ClientBase {
       responseType: "json",
     });
 
+    if (typeof response.data === "string") {
+      return JSON.parse(response.data);
+    }
+
     return response.data;
   }
 
@@ -26,6 +30,10 @@ export default class TellerAccountModule extends ClientBase {
         : undefined,
       responseType: "json",
     });
+
+    if (typeof response.data === "string") {
+      return JSON.parse(response.data);
+    }
 
     return response.data;
   }
@@ -47,6 +55,10 @@ export default class TellerAccountModule extends ClientBase {
       responseType: "json",
     });
 
+    if (typeof response.data === "string") {
+      return JSON.parse(response.data);
+    }
+
     return response.data;
   }
 
@@ -57,6 +69,10 @@ export default class TellerAccountModule extends ClientBase {
         : undefined,
       responseType: "json",
     });
+
+    if (typeof response.data === "string") {
+      return JSON.parse(response.data);
+    }
 
     return response.data;
   }

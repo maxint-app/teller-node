@@ -15,6 +15,11 @@ export default class TellerIdentityModule extends ClientBase {
         : undefined,
       responseType: "json",
     });
+
+    if (typeof response.data === "string") {
+      return JSON.parse(response.data);
+    }
+    
     return response.data;
   }
 }

@@ -30,6 +30,10 @@ export default class TellerTransactionModule extends ClientBase {
       },
     );
 
+    if (typeof response.data === "string") {
+      return JSON.parse(response.data);
+    }
+
     return response.data;
   }
 
@@ -46,6 +50,10 @@ export default class TellerTransactionModule extends ClientBase {
         responseType: "json",
       },
     );
+
+    if (typeof response.data === "string") {
+      return JSON.parse(response.data);
+    }
 
     return response.data;
   }
