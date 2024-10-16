@@ -1,4 +1,4 @@
-import { Axios } from "axios";
+import type { Axios } from "axios";
 export declare abstract class ClientBase {
     protected axios: Axios;
     constructor(axios: Axios);

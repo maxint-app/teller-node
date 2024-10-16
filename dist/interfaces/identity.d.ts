@@ -1,4 +1,4 @@
-import { TellerAccount } from "./account.js";
+import type { TellerAccount } from "./account.js";
 export interface TellerAddress {
     primary: boolean;
     street: string;

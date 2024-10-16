@@ -25,15 +25,11 @@
   },
   "homepage": "https://github.com/maxint-app/teller-node#readme",
   "devDependencies": {
+    "@biomejs/biome": "1.9.3",
     "@types/node": "^20.11.15",
-    "@typescript-eslint/eslint-plugin": "^6.20.0",
-    "@typescript-eslint/parser": "^6.20.0",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.4",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "axios": "^1.6.7"
+    "axios": "^1.7.7"
   }
 }

@@ -1,13 +1,8 @@
-import { Axios } from "axios";
 import { ClientBase } from "./client.js";
-import { TellerOptionsPagination } from "../common/types.js";
-import { TellerTransaction } from "../interfaces/transaction.js";
+import type { TellerOptionsPagination } from "../common/types.js";
+import type { TellerTransaction } from "../interfaces/transaction.js";
 
 export default class TellerTransactionModule extends ClientBase {
-  constructor(axios: Axios) {
-    super(axios);
-  }
-
   async list(
     accountId: string,
     options?: TellerOptionsPagination,

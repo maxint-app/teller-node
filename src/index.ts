@@ -1,9 +1,10 @@
 import { Axios } from "axios";
 import TellerIdentityModule from "./modules/identity.js";
-import https from "https";
-import fs from "fs";
+import https from "node:https";
+import fs from "node:fs";
 import TellerAccountModule from "./modules/account.js";
 import TellerTransactionModule from "./modules/transaction.js";
+import TellerInstitutionsModule from "./modules/instituions.js";
 
 export * from "./interfaces/identity.js";
 export * from "./interfaces/account.js";
@@ -17,6 +18,7 @@ export class TellerClient {
   identity: TellerIdentityModule;
   account: TellerAccountModule
   transactions: TellerTransactionModule;
+  institutions: TellerInstitutionsModule
 
   private accessToken: string | undefined;
 
@@ -53,5 +55,6 @@ export class TellerClient {
     this.identity = new TellerIdentityModule(axios);
     this.account = new TellerAccountModule(axios);
     this.transactions = new TellerTransactionModule(axios);
+    this.institutions = new TellerInstitutionsModule(axios);
   }
 }

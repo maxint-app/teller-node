@@ -1,13 +1,8 @@
-import { Axios } from "axios";
 import { ClientBase } from "./client.js";
-import { TellerOptionsBase } from "../common/types.js";
-import { TellerAccount, TellerAccountBalances, TellerAccountDetails } from "../interfaces/account.js";
+import type { TellerOptionsBase } from "../common/types.js";
+import type { TellerAccount, TellerAccountBalances, TellerAccountDetails } from "../interfaces/account.js";
 
 export default class TellerAccountModule extends ClientBase {
-  constructor(axios: Axios) {
-    super(axios);
-  }
-
   async list(options?: TellerOptionsBase): Promise<TellerAccount[]> {
     const response = await this.axios.get("/account", {
       auth: options?.accessToken
