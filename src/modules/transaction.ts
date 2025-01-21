@@ -7,14 +7,12 @@ export default class TellerTransactionModule extends ClientBase {
     accountId: string,
     options?: TellerOptionsPagination
   ): Promise<TellerTransaction[]> {
-    const searchParams = (() => {
-      if (options == null) return "";
+    const params = Object.entries({
+      count: options?.count?.toString(),
+      from_id: options?.from_id,
+    }).filter((entry): entry is [string, string] => entry[1] != null);
 
-      return new URLSearchParams({
-        from_id: options.from_id,
-        count: options.count.toString(),
-      });
-    })();
+    const searchParams = new URLSearchParams(params);
 
     const response = await this.axios.get(
       `/accounts/${accountId}/transactions?${searchParams}`,
