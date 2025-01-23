@@ -5,15 +5,14 @@ import type { TellerTransaction } from "../interfaces/transaction.js";
 export default class TellerTransactionModule extends ClientBase {
   async list(
     accountId: string,
-    options?: TellerOptionsPagination,
+    options?: TellerOptionsPagination
   ): Promise<TellerTransaction[]> {
-    const searchParams =
-      options?.cursor && typeof options?.limit === "number"
-        ? new URLSearchParams({
-            from_id: options?.cursor,
-            count: options?.limit?.toString(),
-          }).toString()
-        : null;
+    const params = Object.entries({
+      count: options?.count?.toString(),
+      from_id: options?.from_id,
+    }).filter((entry): entry is [string, string] => entry[1] != null);
+
+    const searchParams = new URLSearchParams(params);
 
     const response = await this.axios.get(
       `/accounts/${accountId}/transactions?${searchParams}`,
@@ -22,7 +21,7 @@ export default class TellerTransactionModule extends ClientBase {
           ? { username: options.accessToken, password: "" }
           : undefined,
         responseType: "json",
-      },
+      }
     );
 
     if (typeof response.data === "string") {
@@ -34,7 +33,7 @@ export default class TellerTransactionModule extends ClientBase {
 
   async get(
     { accountId, id }: { id: string; accountId: string },
-    options?: TellerOptionsPagination,
+    options?: TellerOptionsPagination
   ): Promise<TellerTransaction> {
     const response = await this.axios.get(
       `/accounts/${accountId}/transactions/${id}`,
@@ -43,7 +42,7 @@ export default class TellerTransactionModule extends ClientBase {
           ? { username: options.accessToken, password: "" }
           : undefined,
         responseType: "json",
-      },
+      }
     );
 
     if (typeof response.data === "string") {
