@@ -16,9 +16,11 @@ $ yarn add node-teller
 
 ## Usage
 
-First, generate certificates and private key from teller.io dashboard.
-Then place the files in your project root. Make sure to add them to .gitignore 
-to avoid committing them to your repository.
+Go to https://teller.io/dashboard > Certificates > Create a new certificate.
+
+Save certificate files `certificate.pem` and `private_key.pem` in project root.
+
+Add `.pem` to `.gitignore`, to tell Git to ignore certificate files when you make a commit.
 
 Use in your project:
 
