@@ -1,17 +1,18 @@
-# Node Teller
+# @maxint/teller
 
-Nodejs client for [teller.io](https://teller.io) API
+Nodejs client for [teller.io](https://teller.io) API by [maxint.com](https://maxint.com/)
 
 ## Installation
 
 ```bash
-$ npm install node-teller
+$ npm install @maxint/teller
 ```
 
-or, with yarn
-
 ```bash
-$ yarn add node-teller
+$ yarn add @maxint/teller
+```
+```bash
+$ pnpm add @maxint/teller
 ```
 
 ## Usage
@@ -25,7 +26,7 @@ Add `.pem` to `.gitignore`, to tell Git to ignore certificate files when you mak
 Use in your project:
 
 ```typescript
-import { TellerClient } from 'node-teller';
+import { TellerClient } from '@maxint/teller';
 
 const teller = new TellerClient({
   certificatePath: "./certificate.pem",
