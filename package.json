@@ -1,6 +1,6 @@
 {
-  "name": "teller",
-  "version": "0.1.0",
+  "name": "node-teller",
+  "version": "0.1.5",
   "description": "teller.io API client for nodejs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
