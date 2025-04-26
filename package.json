@@ -1,7 +1,7 @@
 {
   "name": "teller",
-  "version": "0.1.0",
-  "description": "teller.io API client for nodejs",
+  "version": "0.2.0",
+  "description": "teller.io API client for nodejs by maxint.com",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
