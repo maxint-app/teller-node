@@ -1,5 +1,5 @@
 {
-  "name": "teller",
+  "name": "@maxint/teller",
   "version": "0.2.0",
   "description": "teller.io API client for nodejs by maxint.com",
   "main": "dist/index.js",
